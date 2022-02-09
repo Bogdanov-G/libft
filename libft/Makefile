@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: Dykk Dessie <gleb_bogdan@mail.ru>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/22 17:30:23 by Dykk Dessie       #+#    #+#              #
-#    Updated: 2021/10/26 12:08:11 by Dykk Dessie      ###   ########.fr        #
+#    Created: 2021/10/22 17:30:23 by Dykk              #+#    #+#              #
+#    Updated: 2022/02/09 18:02:58 by gleb             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,11 @@ SRC		=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c\
 			ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 			ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c \
 
+SRC_B	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+
 OBJ		=	$(SRC:.c=.o)
+
+OBJ_B	=	$(SRC_B:.c=.o)
 
 CC		=	gcc
 CFLAGS	=	-Wall -Wextra -Werror 
@@ -40,11 +44,14 @@ $(NAME)	:	$(OBJ)
 				$(CC) $(CFLAGS) -c -o $@ $<
 
 clean	:
-				$(RM) $(OBJ)
+				$(RM) $(OBJ) $(OBJ_B)
 
 fclean	:	clean
 				$(RM) $(NAME)
 
 re		:	fclean all
+
+bonus	:	$(OBJ) $(OBJ_B)
+				$(LIB) $(NAME) $(OBJ) $(OBJ_B)
 
 .PHONY	:	all, clean, fclean, re
