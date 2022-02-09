@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Dykk Dessie <gleb_bogdan@mail.ru>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 12:34:36 by Dykk Dessie       #+#    #+#             */
-/*   Updated: 2021/10/22 18:42:43 by Dykk Dessie      ###   ########.fr       */
+/*   Created: 2021/10/12 12:34:36 by Dykk              #+#    #+#             */
+/*   Updated: 2022/02/09 18:02:47 by gleb             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+/* bonus */
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
 #endif
