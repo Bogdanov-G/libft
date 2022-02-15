@@ -21,10 +21,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		if (f)
 		{
-			ft_lstadd_back(&new_lst, f(lst->content)));
+			ft_lstadd_back(&new_lst, f(lst->content));
 			if (del && lst->content)
-				del(lst->content)
+				del(lst->content);
 		}
+		lst = lst->next;
 	}
 	return (new_lst);
 }
