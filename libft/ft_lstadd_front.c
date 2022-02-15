@@ -17,17 +17,12 @@ Adds the node ’new’ at the beginning of the list.
 */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*tmp;
-
 	if (!new || !lst)
 		return ;
 	if (!*lst){
 		*lst = new;
 		return ;
 	}
-	new->next = (*lst)->next;
-	(*lst)->next = new;
-	tmp = new->content;
-	new->content = (*lst)->content;
-	(*lst)->content = tmp;
+	new->next = (*lst);
+	*lst = new;
 }
