@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Dykk Dessie <gleb_bogdan@mail.ru>          +#+  +:+       +#+        */
+/*   By: Dykk Dessie <ddessie@student.21-school.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 16:04:37 by Dykk Dessie       #+#    #+#             */
-/*   Updated: 2021/10/22 11:17:59 by Dykk Dessie      ###   ########.fr       */
+/*   Updated: 2022/02/15 14:12:14 by Dykk Dessie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

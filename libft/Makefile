@@ -56,3 +56,4 @@ bonus	:	$(OBJ) $(OBJ_B)
 				$(LIB) $(NAME) $(OBJ) $(OBJ_B)
 
 .PHONY	:	all, clean, fclean, re
+

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Dykk Dessie <gleb_bogdan@mail.ru>          +#+  +:+       +#+        */
+/*   By: Dykk Dessie <ddessie@student.21-school.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/15 19:29:56 by Dykk Dessie       #+#    #+#             */
-/*   Updated: 2021/10/25 16:43:01 by Dykk Dessie      ###   ########.fr       */
+/*   Created: 2022/02/15 14:08:47 by gleb              #+#    #+#             */
+/*   Updated: 2022/02/15 14:13:54 by Dykk Dessie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		if (f)
 		{
-			ft_lstadd_back(&new_lst, f(lst->content));
+			ft_lstadd_back(&new_lst, ft_lstnew(f(lst->content)));
 			if (del && lst->content)
 				del(lst->content);
 		}
